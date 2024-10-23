@@ -19,6 +19,21 @@ body {
 .text-container {
     margin-left: 20px; /* 向右移动文本，增加左边距 */
 }
+#alarmMessage {
+            color: #D5006D; /* 修改文本颜色为深粉色 */
+            font-size: 64px; /* 修改为64px */
+            font-weight: bold;
+        }
+
+        /* 增大时间文字样式 */
+#clock {
+            font-size: 64px; /* 修改为64px */
+            color: #D5006D; /* 设置字体颜色为粉色 */
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        /* 布局 */
 
 .video-container {
     display: flex;
