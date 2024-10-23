@@ -1,0 +1,9 @@
+body {
+    background-image: url('images/00.jpg'); /* 设置背景图像 */
+    background-size: cover; /* 使背景图像覆盖整个页面 */
+    background-repeat: no-repeat; /* 不重复背景图像 */
+    background-position: center; /* 背景图像居中 */
+    min-height: 100vh; /* 确保背景图像在视口中充满 */
+    margin: 0; /* 去除默认的边距 */
+    padding: 0; /* 去除默认的内边距 */
+}
