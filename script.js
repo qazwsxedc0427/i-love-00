@@ -60,3 +60,4 @@ function playVideo(video) {
 // 每秒更新一次时间
 setInterval(updateTime, 1000);
 updateTime();
+
