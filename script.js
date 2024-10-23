@@ -33,6 +33,8 @@ function triggerAlarm() {
     video.currentTime = 0; // 重置视频到开头
     playCount = 0; // 重置播放计数
 
+    // 取消静音并播放视频
+    video.muted = false; // 取消静音
     playVideo(video); // 播放视频
 }
 
@@ -48,6 +50,7 @@ function playVideo(video) {
             video.style.display = 'none'; // 隐藏视频
             video.currentTime = 0; // 重置视频到开头
             document.getElementById('alarmMessage').textContent = ''; // 清空提示信息
+            video.muted = true; // 再次静音
         }
     };
 }
