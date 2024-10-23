@@ -19,11 +19,3 @@ body {
     padding: 10px;
     border-radius: 5px;
 }
-
-#clock {
-    color: black; /* 设定当前时间的颜色为黑色 */
-}
-
-#alarmMessage {
-    color: black; /* 设定闹钟提示信息的颜色为黑色 */
-}
