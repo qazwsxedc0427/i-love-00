@@ -1,77 +1,35 @@
 body {
-    background-image: url('00.jpg'); /* 设置背景图像 */
-    background-size: cover; /* 使背景图像覆盖整个页面 */
-    background-repeat: no-repeat; /* 不重复背景图像 */
-    background-position: center; /* 背景图像居中 */
-    min-height: 100vh; /* 确保背景图像在视口中充满 */
-    margin: 0; /* 去除默认的边距 */
-    padding: 0; /* 去除默认的内边距 */
-    color: black; /* 设置默认字体颜色为白色 */
+    background-image: url('00.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    color: black; /* 默认文字颜色为黑色 */
 }
 
-.container {
-    display: flex;
-    justify-content: space-between; /* 左右分布 */
-    align-items: flex-start; /* 上对齐 */
-    padding: 20px; /* 添加内边距 */
-}
-
-.text-container {
-    margin-left: 20px; /* 向右移动文本，增加左边距 */
-}
-
-.video-container {
-    display: flex;
-    justify-content: center; /* 中间对齐 */
-    align-items: center; /* 中间对齐 */
-    flex-grow: 1; /* 使视频容器占据剩余空间 */
-}
-
-#clock {
-    font-size: 48px; /* 增加字体大小 */
-    color: #D5006D; /* 设置字体颜色为粉色 */
-    font-weight: bold; /* 设置字体加粗 */
-    margin-top: 10px; /* 添加顶部间距 */
-}
-
-#alarmMessage {
-    color: #D5006D; /* 修改文本颜色为深粉色 */
-    font-size: 30px; /* 增加字体大小 */
-    font-weight: bold; /* 设置字体加粗 */
+/* 强制设置为黑色 */
+h1, label, #clock, #alarmMessage, #footerText {
+    color: black !important; /* 使用 !important 确保颜色生效 */
 }
 
 #footerText {
-    position: absolute; /* 绝对定位 */
-    bottom: 20px; /* 距离底部20像素 */
-    left: 20px; /* 距离左边20像素 */
-    background-color: rgba(0, 0, 0, 0.5); /* 半透明背景 */
-    padding: 10px; /* 内边距 */
-    border-radius: 5px; /* 圆角效果 */
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(255, 255, 255, 0.5); /* 半透明背景 */
+    padding: 10px;
+    border-radius: 5px;
 }
 
-#floatingImage {
-    position: absolute; /* 绝对定位 */
-    bottom: 20px; /* 距离底部20像素 */
-    left: 50%; /* 水平居中 */
-    transform: translateX(-50%); /* 调整居中 */
-    animation: float 10s ease-in-out infinite; /* 添加动画 */
-    width: 150px; /* 设置图片宽度 */
+#clock {
+    font-size: 48px; /* 可选：增加字体大小 */
+    font-weight: bold; /* 可选：加粗 */
 }
 
-@keyframes float {
-    0% {
-        transform: translate(-60%, 0) scaleX(1); /* 初始位置，向左调整 */
-    }
-    25% {
-        transform: translate(-100%, 0) scaleX(1); /* 向左移动100% */
-    }
-    50% {
-        transform: translate(40vw, 0) scaleX(-1); /* 向右移动并翻转 */
-    }
-    75% {
-        transform: translate(100%, 0) scaleX(-1); /* 向右移动100%并保持翻转 */
-    }
-    100% {
-        transform: translate(-60%, 0) scaleX(1); /* 回到中间位置，恢复正常方向 */
-    }
+#alarmMessage {
+    font-size: 30px; /* 可选：增加字体大小 */
+    font-weight: bold; /* 可选：加粗 */
 }
+
