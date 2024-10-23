@@ -6,7 +6,7 @@ body {
     min-height: 100vh;
     margin: 0;
     padding: 0;
-    color: black; /* 全局文字颜色设置为黑色 */
+    color: black;
 }
 
 #footerText {
