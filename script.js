@@ -40,7 +40,9 @@ function triggerAlarm() {
 
 // 播放视频并处理播放结束事件
 function playVideo(video) {
-    video.play(); // 播放视频
+    video.play().catch((error) => {
+        console.error('Error playing video:', error); // 捕获播放错误
+    }); // 播放视频
     video.onended = function() {
         playCount++; // 增加播放计数
         if (playCount < 3) {
