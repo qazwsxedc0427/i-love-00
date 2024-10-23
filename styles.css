@@ -6,30 +6,24 @@ body {
     min-height: 100vh;
     margin: 0;
     padding: 0;
-    color: black; /* 默认文字颜色为黑色 */
-}
-
-/* 强制设置为黑色 */
-h1, label, #clock, #alarmMessage, #footerText {
-    color: black !important; /* 使用 !important 确保颜色生效 */
+    color: black; /* 全局文字颜色设置为黑色 */
 }
 
 #footerText {
     position: absolute;
     bottom: 20px;
     left: 20px;
+    color: black; /* 黑色文字 */
+    font-size: 20px;
     background-color: rgba(255, 255, 255, 0.5); /* 半透明背景 */
     padding: 10px;
     border-radius: 5px;
 }
 
 #clock {
-    font-size: 48px; /* 可选：增加字体大小 */
-    font-weight: bold; /* 可选：加粗 */
+    color: black; /* 设定当前时间的颜色为黑色 */
 }
 
 #alarmMessage {
-    font-size: 30px; /* 可选：增加字体大小 */
-    font-weight: bold; /* 可选：加粗 */
+    color: black; /* 设定闹钟提示信息的颜色为黑色 */
 }
-
