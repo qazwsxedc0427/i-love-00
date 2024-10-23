@@ -42,7 +42,7 @@ function triggerAlarm() {
 function playVideo(video) {
     video.play().catch((error) => {
         console.error('Error playing video:', error); // 捕获播放错误
-    }); // 播放视频
+    });
     video.onended = function() {
         playCount++; // 增加播放计数
         if (playCount < 3) {
@@ -60,4 +60,3 @@ function playVideo(video) {
 // 每秒更新一次时间
 setInterval(updateTime, 1000);
 updateTime();
-
