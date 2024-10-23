@@ -5,106 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>00牌惡搞鬧鐘</title>
     <link rel="stylesheet" href="styles.css"> <!-- 引入CSS文件 -->
-    <style>
-        /* 网页背景设置 */
-        body {
-            background-image: url('images/00.jpg'); /* 设置背景图像 */
-            background-size: cover; /* 使背景图像覆盖整个页面 */
-            background-repeat: no-repeat; /* 不重复背景图像 */
-            background-position: center; /* 背景图像居中 */
-            min-height: 100vh; /* 确保背景图像在视口中充满 */
-            margin: 0; /* 去除默认的边距 */
-            padding: 0; /* 去除默认的内边距 */
-            position: relative; /* 为定位子元素提供上下文 */
-        }
-
-        /* 禁用用户交互 */
-        #alarmVideo {
-            pointer-events: none; /* 禁用鼠标事件 */
-            display: none; /* 默认隐藏视频 */
-            width: 800px; /* 将宽度设置为800px（原400px的两倍） */
-            height: 450px; /* 将高度设置为450px（原225px的两倍），根据视频比例调整 */
-            object-fit: contain; /* 确保视频保持比例，不裁剪 */
-        }
-        
-        /* 设置提示信息为深粉色 */
-        #alarmMessage {
-            color: #D5006D; /* 修改文本颜色为深粉色 */
-            font-size: 30px; /* 增加字体大小 */
-            font-weight: bold; /* 设置字体加粗 */
-        }
-
-        /* 增大时间文字样式 */
-        #clock {
-            font-size: 48px; /* 增加字体大小 */
-            color: #D5006D; /* 设置字体颜色为粉色 */
-            font-weight: bold; /* 设置字体加粗 */
-            margin-top: 10px; /* 添加顶部间距 */
-        }
-
-        /* 布局 */
-        .container {
-            display: flex;
-            justify-content: space-between; /* 左右分布 */
-            align-items: flex-start; /* 上对齐 */
-            padding: 20px; /* 添加内边距 */
-        }
-
-        .text-container {
-            margin-left: 20px; /* 向右移动文本，增加左边距 */
-        }
-
-        .video-container {
-            display: flex;
-            justify-content: center; /* 中间对齐 */
-            align-items: center; /* 中间对齐 */
-            flex-grow: 1; /* 使视频容器占据剩余空间 */
-        }
-
-        /* 漂浮图片样式 */
-        #floatingImage {
-            position: absolute; /* 绝对定位 */
-            bottom: 20px; /* 距离底部20像素 */
-            left: 50%; /* 水平居中 */
-            transform: translateX(-50%); /* 调整居中 */
-            animation: float 10s ease-in-out infinite; /* 添加动画 */
-            width: 150px; /* 设置图片宽度 */
-        }
-
-        /* 左右漂浮动画 */
-        @keyframes float {
-            0% {
-                transform: translate(-60%, 0) scaleX(1); /* 初始位置，向左调整 */
-            }
-            25% {
-                transform: translate(-100%, 0) scaleX(1); /* 向左移动100% */
-            }
-            50% {
-                transform: translate(40vw, 0) scaleX(-1); /* 向右移动并翻转 */
-            }
-            75% {
-                transform: translate(100%, 0) scaleX(-1); /* 向右移动100%并保持翻转 */
-            }
-            100% {
-                transform: translate(-60%, 0) scaleX(1); /* 回到中间位置，恢复正常方向 */
-            }
-        }
-
-        /* 左下角文本样式 */
-        #footerText {
-            position: absolute; /* 绝对定位 */
-            bottom: 20px; /* 距离底部20像素 */
-            left: 20px; /* 距离左边20像素 */
-            color: white; /* 文本颜色 */
-            font-size: 20px; /* 字体大小 */
-            background-color: rgba(0, 0, 0, 0.5); /* 半透明背景 */
-            padding: 10px; /* 内边距 */
-            border-radius: 5px; /* 圆角效果 */
-        }
-    </style>
 </head>
 <body>
-
     <div class="container">
         <div class="text-container">
             <h1>現在時間</h1>
@@ -118,19 +20,16 @@
         </div>
 
         <div class="video-container">
-            <video id="alarmVideo"> <!-- 移除width属性，使用CSS设置 -->
-                <source src="00_.mp4" type="video/mp4"> <!-- 视频文件 -->
+            <video id="alarmVideo" muted>
+                <source src="00_.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>
     </div>
 
-    <img id="floatingImage" src="IMG_3770.jpg" alt="漂浮图片"> <!-- 新增漂浮图片 -->
-
-    <!-- 左下角文本 -->
+    <img id="floatingImage" src="IMG_3770.jpg" alt="漂浮图片">
     <div id="footerText">小符璃出品，必屬精品!!!</div>
 
     <script src="script.js"></script> <!-- 引入JavaScript文件 -->
-    
 </body>
 </html>
