@@ -1,21 +1,39 @@
 body {
-    background-image: url('00.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    min-height: 100vh;
-    margin: 0;
-    padding: 0;
+    background-image: url('00.jpg'); /* 设置背景图像 */
+    background-size: cover; /* 使背景图像覆盖整个页面 */
+    background-repeat: no-repeat; /* 不重复背景图像 */
+    background-position: center; /* 背景图像居中 */
+    min-height: 100vh; /* 确保背景图像在视口中充满 */
+    margin: 0; /* 去除默认的边距 */
+    padding: 0; /* 去除默认的内边距 */
     color: black; /* 全局文字颜色设置为黑色 */
 }
 
+.container {
+    display: flex;
+    justify-content: space-between; /* 左右分布 */
+    align-items: flex-start; /* 上对齐 */
+    padding: 20px; /* 添加内边距 */
+}
+
+.text-container {
+    margin-left: 20px; /* 向右移动文本，增加左边距 */
+}
+
+.video-container {
+    display: flex;
+    justify-content: center; /* 中间对齐 */
+    align-items: center; /* 中间对齐 */
+    flex-grow: 1; /* 使视频容器占据剩余空间 */
+}
+
 #footerText {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
+    position: absolute; /* 绝对定位 */
+    bottom: 20px; /* 距离底部20像素 */
+    left: 20px; /* 距离左边20像素 */
     color: black; /* 黑色文字 */
-    font-size: 20px;
+    font-size: 20px; /* 字体大小 */
     background-color: rgba(255, 255, 255, 0.5); /* 半透明背景 */
-    padding: 10px;
-    border-radius: 5px;
+    padding: 10px; /* 内边距 */
+    border-radius: 5px; /* 圆角效果 */
 }
