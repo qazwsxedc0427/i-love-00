@@ -31,9 +31,38 @@ body {
     position: absolute; /* 绝对定位 */
     bottom: 20px; /* 距离底部20像素 */
     left: 20px; /* 距离左边20像素 */
-    color: black; /* 黑色文字 */
+    color: #D5006D; /* 粉色文字 */
     font-size: 20px; /* 字体大小 */
     background-color: rgba(255, 255, 255, 0.5); /* 半透明背景 */
     padding: 10px; /* 内边距 */
     border-radius: 5px; /* 圆角效果 */
+}
+
+/* 漂浮图片样式 */
+#floatingImage {
+    position: absolute; /* 绝对定位 */
+    bottom: 20px; /* 距离底部20像素 */
+    left: 50%; /* 水平居中 */
+    transform: translateX(-50%); /* 调整居中 */
+    animation: float 10s ease-in-out infinite; /* 添加动画 */
+    width: 150px; /* 设置图片宽度 */
+}
+
+/* 左右漂浮动画 */
+@keyframes float {
+    0% {
+        transform: translate(-60%, 0) scaleX(1); /* 初始位置，向左调整 */
+    }
+    25% {
+        transform: translate(-100%, 0) scaleX(1); /* 向左移动100% */
+    }
+    50% {
+        transform: translate(40vw, 0) scaleX(-1); /* 向右移动并翻转 */
+    }
+    75% {
+        transform: translate(100%, 0) scaleX(-1); /* 向右移动100%并保持翻转 */
+    }
+    100% {
+        transform: translate(-60%, 0) scaleX(1); /* 回到中间位置，恢复正常方向 */
+    }
 }
